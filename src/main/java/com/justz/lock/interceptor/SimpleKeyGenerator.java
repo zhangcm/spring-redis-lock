@@ -32,8 +32,8 @@ public class SimpleKeyGenerator implements KeyGenerator {
             }
             lockParams.add(param.toString());
         }
-        String lockParamKey = StringUtils.collectionToDelimitedString(lockParams, "_");
-        return StringUtils.hasText(keyPrefix) ? keyPrefix + "_" + lockParamKey : lockParamKey;
+        String lockParamKey = StringUtils.collectionToDelimitedString(lockParams, ":");
+        return StringUtils.hasText(keyPrefix) ? keyPrefix + ":" + lockParamKey : lockParamKey;
     }
 
     private List<Integer> getLockParamIndex(Class<?> targetClass, Method method) {

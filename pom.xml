@@ -12,7 +12,7 @@
 
     <groupId>io.github.zhangcm</groupId>
     <artifactId>spring-redis-lock</artifactId>
-    <version>0.0.1-RELEASE</version>
+    <version>0.1.0-RELEASE</version>
     <packaging>jar</packaging>
     <name>Spring Redis Lock</name>
 

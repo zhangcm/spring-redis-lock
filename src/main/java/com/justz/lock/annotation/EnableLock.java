@@ -37,9 +37,9 @@ public @interface EnableLock {
     AdviceMode mode() default AdviceMode.PROXY;
 
     /**
-     * Indicate the ordering of the execution of the transaction advisor
+     * Indicate the ordering of the execution of the lock advisor
      * when multiple advices are applied at a specific joinpoint.
-     * The default is {@link Ordered#LOWEST_PRECEDENCE}.
+     * The default is {@link Ordered#LOWEST_PRECEDENCE - 1}.
      */
-    int order() default Ordered.LOWEST_PRECEDENCE;
+    int order() default Ordered.LOWEST_PRECEDENCE - 1;
 }

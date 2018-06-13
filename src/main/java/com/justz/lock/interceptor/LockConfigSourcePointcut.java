@@ -9,7 +9,7 @@ import java.lang.reflect.Method;
 
 /**
  * A Pointcut that matches if the underlying {@link LockConfigSource}
- *  * has an attribute for a given method.
+ * has an attribute for a given method.
  */
 abstract class LockConfigSourcePointcut extends StaticMethodMatcherPointcut implements Serializable {
 

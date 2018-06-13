@@ -19,8 +19,6 @@ public class LockOperationConfig {
 
     private long maxWaitMillSeconds;
 
-    private TimeUnit timeUnit;
-
     private String lockManager;
 
     private ActionType actionAfterAcquireFailed;
@@ -63,14 +61,6 @@ public class LockOperationConfig {
 
     public void setMaxWaitMillSeconds(long maxWaitMillSeconds) {
         this.maxWaitMillSeconds = maxWaitMillSeconds;
-    }
-
-    public TimeUnit getTimeUnit() {
-        return timeUnit;
-    }
-
-    public void setTimeUnit(TimeUnit timeUnit) {
-        this.timeUnit = timeUnit;
     }
 
     public String getLockManager() {

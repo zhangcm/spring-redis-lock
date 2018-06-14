@@ -2,6 +2,15 @@
 
 ### Usage:
 
+添加maven依赖:
+```xml
+<dependency>
+    <groupId>io.github.zhangcm</groupId>
+    <artifactId>spring-redis-lock</artifactId>
+    <version>0.1.1-RELEASE</version>
+</dependency>
+```
+
 在启动类加上`@EnableLock`注解，开启加锁功能
 
 ```java
@@ -86,6 +95,11 @@ public class CountServiceTest {
 ```
 
 #### 测试结果：
-第一个测试用例执行不通过，因为count++存在并发问题
-第二个测试用例执行通过，用锁来保证count++的顺序执行，耗时较长
+* 第一个测试用例执行不通过，因为count++存在并发问题
+* 第二个测试用例执行通过，用锁来保证count++的顺序执行
 
+### 特性
+* 自定义切入顺序。默认比@Transaction高1，确保在事务提交后再释放锁
+* 自定义key的生成规则，需实现KeyGenerator接口
+* 自定义锁的实现，需实现LockManager接口
+* 自定义注解
